@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Juego del Ahorcado</title>
+        <link rel="icon" href="./assets/img/web.png">
+        <link rel="stylesheet" href="./assets/css/reset.css">
+        <link rel="stylesheet" href="./assets/css/index.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <img src="./assets/img/logo.svg" alt="Logo A" id="img-a">
+
+        <div id="botones">
+            <button class="boton" id="boton-iniciar">Iniciar juego</button>
+            <button class="boton" id="boton-new-palabra">Agregar nueva palabra</button>
+        </div>
+
+        <div id="text-botons" visibility: hidden>
+            <textarea name="text-area" id="text-area" cols="30" rows="10" placeholder="Ingrese una palabra"></textarea>
+
+            <div id="botones-agregar">
+                <h2><img src="./assets/img/advertencia.svg" alt="Simbolo de advertencia">Máx. de 8 letras</h2>
+
+                <button onclick = guardar(); id="boton-guardar" class="boton">Guardar</button>
+                <button onclick = cancelar(); id="boton-cancelar" class="boton">Cancelar</button>
+
+            </div>
+        </div>
+
+        <section id="canv-boton">
+            <div id="tablero">
+
+            </div>
+
+            <div id="botones-del-canv" visibility: hidden>
+                <button class="boton" id="boton-reiniciar">Nuevo juego</button>
+                <button class="boton" id="boton-desistir">Desistir</button>
+            </div>
+        </section>
+    </body>
+
+    <footer>
+        <p class="piePagina">Gustavo Erquicia</p>
+    </footer>
+
+    <script src="./assets/js/crear-tablero.js"></script>
+    <script src="./assets/js/crear-palabra.js"></script>
+    <script src="./assets/js/crear-lineas.js"></script>
+    <script src="./assets/js/verificar-tecla.js"></script>
+    <script src="./assets/js/crear-letra.js"></script>
+    <script src="./assets/js/crear-horca.js"></script>
+    <script src="./assets/js/verificar-letra-correcta.js"></script>
+    <script src="./assets/js/crear-perdiste.js"></script>
+    <script src="./assets/js/crear-ganar.js"></script>
+    <script src="./assets/js/agregar-palabra.js"></script>
+</html>
